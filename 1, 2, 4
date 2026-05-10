@@ -1,0 +1,47 @@
+Task 1
+Adjacency list:
+A: C B D
+B: A C E G
+C: A B D
+D: C A
+E: G F B
+F: G E
+G: F B
+
+DFS:
+A → C
+C → B
+B → E
+E → G
+G → F
+F → (backtrack, no new nodes)
+Back to C → D
+Done
+order:
+A → C → B → E → G → F → D
+
+Task 2
+BFS:
+Visit A → add (C, B, D)
+Visit C → no new nodes
+Visit B → add (E, G)
+Visit D → no new nodes
+Visit E → add (F)
+Visit G → no new nodes
+Visit F → no new nodes
+order:
+A → C → B → D → E → G → F
+
+Task 4
+possible routes:
+Edinburgh → Perth → Dundee
+= 100 + 60 = 160
+Edinburgh → Stirling → Perth → Dundee
+= 50 + 40 + 60 = 150
+Edinburgh → Glasgow → Stirling → Perth → Dundee
+= 70 + 50 + 40 + 60 = 220
+Shortest:
+Edinburgh → Stirling → Perth → Dundee
+
+Total:
+150
